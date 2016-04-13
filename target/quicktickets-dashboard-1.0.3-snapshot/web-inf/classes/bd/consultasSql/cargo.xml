@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="db.consultasSql">
+	<select id="todosCargos" resultType="Cargo">
+		SELECT id_cargo, cargo, descripcion
+		FROM cargos;
+	</select>
+	
+	<select id="unCargo" resultType="Cargo">
+		SELECT id_cargo, cargo, descripcion
+		FROM cargos WHERE ;
+	</select>
+</mapper>
+	
