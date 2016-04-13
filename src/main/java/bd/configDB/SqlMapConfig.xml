@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="uaz.edu.mx.formularios.modelos.Alumno" alias="Alumno" />
+		<typeAlias type="uaz.edu.mx.formularios.modelos.Estado" alias="Estado" />
+	</typeAliases>
+	
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC" />
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/control" />
+				<property name="username" value="usercontrol" />
+				<property name="password" value="xadminx" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="uaz/edu/mx/formularios/ConfigDB/alumno.xml" />
+		<mapper resource="uaz/edu/mx/formularios/ConfigDB/estado.xml" />
+	</mappers>
+</configuration>
